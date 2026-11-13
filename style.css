@@ -1,0 +1,183 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top,
+                    #172033 0%,
+                    #0d1117 45%,
+                    #030712 100%);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #sm-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #f0f6fc;
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            margin-bottom: 35px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 10px;
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            flex: 1;
+            min-width: 0;
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid #303d55;
+            border-radius: 12px;
+            outline: none;
+            background: #161e2d;
+            color: #f0f6fc;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .search-box input::placeholder {
+            color: #8b9bb5;
+        }
+
+        .search-box input:focus {
+            border-color: #388bfd;
+            box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.15);
+        }
+
+        .search-box button {
+            flex-shrink: 0;
+            padding: 16px 28px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #388bfd, #2463eb);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(56, 139, 253, 0.25);
+        }
+
+        .search-box button:active {
+            transform: translateY(0);
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+            margin: 45px auto 0;
+            padding: 30px;
+            background: rgba(22, 30, 45, 0.85);
+            border: 1px solid #263247;
+            border-radius: 20px;
+            color: #ffffff;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: #384a66;
+            transform: translateY(-3px);
+        }
+
+        #image {
+            display: block;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 3px solid #303d55;
+        }
+
+        .user-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .user-info h2 {
+            color: #f0f6fc;
+            font-size: 26px;
+            margin-bottom: 20px;
+            overflow-wrap: anywhere;
+        }
+
+        .user-info p {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            color: #fff;
+            font-size: 15px;
+            margin: 12px 0;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #263247;
+        }
+
+        .user-info span {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .user-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 45px 20px;
+            }
+
+            .card {
+                max-width: 480px;
+                padding: 25px;
+                gap: 20px;
+            }
+
+            #image {
+                width: 95px;
+                height: 95px;
+            }
+
+            .user-info h2 {
+                font-size: 23px;
+            }
+        }
